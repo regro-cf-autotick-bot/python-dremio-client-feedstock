@@ -1,20 +1,20 @@
 {% set name = "python-dremio-client" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/d/dremio_client/dremio_client-{{ version }}.tar.gz
-  sha256: fa238727be593f537d950c252877e053bc87962a48627f1bf94fabcbc0b17ce4
+  sha256: 2381568db836b62f980f7bf7b907a0039758d510345ad7ab1159a198b55bd362
 
 build:
   noarch: python
   number: 0
   entry_points:
     - dremio_client=dremio_client.cli:cli
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
   host:
