@@ -26,6 +26,7 @@ requirements:
     - click >=6.0
     - requests >=2.21.0
     - confuse
+    - pyyaml
     - simplejson
     - attrs
     - six
